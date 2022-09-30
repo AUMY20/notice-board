@@ -1,0 +1,36 @@
+body
+{
+    text-align: center;
+    background-color: ghostwhite;
+    color:black;
+    
+}
+
+.footer
+{
+    position: fixed;
+    color: black;
+    bottom: 0;
+    width: 100%;
+    border-width: 3px;
+    background-color: gray;
+    line-height: 3;
+    text-align: center;
+    border-color: grey;
+    font-size: 20px;
+}
+
+h1
+{
+    font-weight: 900;
+    font-size: 50px;
+}
+
+canvas
+{
+    border-radius: 10px;
+    border-style: ridge;
+    border-color: greenyellow;
+    
+
+}
