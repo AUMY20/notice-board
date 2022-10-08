@@ -13,7 +13,7 @@ body
     bottom: 0;
     width: 100%;
     border-width: 3px;
-    background-color: gray;
+    background-color: rgb(221, 221, 221);
     line-height: 3;
     text-align: center;
     border-color: grey;
