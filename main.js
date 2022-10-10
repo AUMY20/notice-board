@@ -1,3 +1,10 @@
+nosex = 0;
+    nosey = 0;
+    lwristx = 0;
+    lwristy = 0;
+    rwristx = 0;
+    rwristy = 0;
+    text = document.getElementById("text");
 function setup()
 {
     video = createCapture(VIDEO);
@@ -12,6 +19,7 @@ function setup()
 function modelLoded()
 {
     console.log("Why did you open ME!");
+
 }
 
 function gotPoses(results)
@@ -20,4 +28,27 @@ function gotPoses(results)
     {
         console.log( results);
     }
+
+    console.log( results);
+        nosex = results[0].pose.nose.x;
+        nosey = results[0].pose.nose.y;
+        console.log(nosex,nosey);
+
+        lwristx = results[0].pose.leftWrist.x;
+        lwristy = results[0].pose.leftWrist.y;
+        console.log(lwristx,lwristy);
+
+        rwristx = results[0].pose.rightWrist.x;
+        rwristy = results[0].pose.rightWrist.y;
+        console.log(rwristx,rwristy);
+
+        difference = Math.floor(lwristx - rwristx);
+}
+
+function draw()
+{
+    background('gray');
+    textsize(difference);
+    fill('white');
+    text(text,20,20);
 }
